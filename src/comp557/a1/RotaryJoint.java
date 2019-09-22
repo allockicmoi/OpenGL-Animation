@@ -1,5 +1,7 @@
 package comp557.a1;
 
+import javax.vecmath.Tuple3d;
+
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
 
@@ -39,4 +41,16 @@ public class RotaryJoint extends GraphNode {
 		super.display(drawable);
 		gl.glPopMatrix();
 	}
+
+	public void setPosition(Tuple3d t) {
+		this.x=t.x;
+		this.y=t.y;
+		this.z=t.z;
+		
+	}
+
+	
+
+	
+	
 }

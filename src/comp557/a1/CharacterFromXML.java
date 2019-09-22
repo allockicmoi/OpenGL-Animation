@@ -79,18 +79,17 @@ public class CharacterFromXML {
 			// position is optional (ignored if missing) but should probably be a required attribute!​‌​​​‌‌​​​‌‌​​​‌​​‌‌‌​​‌
 			// Could add optional attributes for limits (to all joints)
 
-//			SphericalJoint joint = new SphericalJoint( name );
-//			if ( (t=getTuple3dAttr(dataNode,"position")) != null ) joint.setPosition( t );			
-//			return joint;
+			SphericalJoint joint = new SphericalJoint( name, 0, 0, 0, -90, 90, -90, 90, -90, 90 );
+			if ( (t=getTuple3dAttr(dataNode,"position")) != null ) joint.setPosition( t );			
+			return joint;
 			
 		} else if ( type.equals("rotary") ) {
 			// position and axis are required... passing null to set methods
 			// likely to cause an execption (perhaps OK)
-			
-//			Hinge joint = new Hinge( name );
-//			joint.setPosition( getTuple3dAttr(dataNode,"position") );
-//			joint.setAxis( getTuple3dAttr(dataNode,"axis") );
-//			return joint;
+			String axis = dataNode.getAttributes().getNamedItem("axis").getNodeValue();
+			RotaryJoint joint = new RotaryJoint( name, 0, 0, 0, 0, 0, axis );
+			joint.setPosition( getTuple3dAttr(dataNode,"position") );
+			return joint;
 			
 		}
 		return null;
@@ -105,12 +104,12 @@ public class CharacterFromXML {
 		String type = dataNode.getAttributes().getNamedItem("type").getNodeValue();
 		String name = dataNode.getAttributes().getNamedItem("name").getNodeValue();
 		Tuple3d t;
-		if ( type.equals("box" ) ) {
-//			BodyBox geom = new BodyBox( name );
-//			if ( (t=getTuple3dAttr(dataNode,"center")) != null ) geom.setCentre( t );
-//			if ( (t=getTuple3dAttr(dataNode,"scale")) != null ) geom.setScale( t );
-//			if ( (t=getTuple3dAttr(dataNode,"color")) != null ) geom.setColor( t );
-//			return geom;
+		if ( type.equals("headbox" ) ) {
+			HeadBox head = new HeadBox( name, 0, 0, 0, 0, 0, 0, 0 );
+			if ( (t=getTuple3dAttr(dataNode,"center")) != null ) head.setCentre( t );
+			if ( (t=getTuple3dAttr(dataNode,"scale")) != null ) head.setScale( t );
+			if ( (t=getTuple3dAttr(dataNode,"color")) != null ) head.setColor( t );
+			return head;
 		} else if ( type.equals( "sphere" )) {
 //			BodySphere geom = new BodySphere( name );				
 //			if ( (t=getTuple3dAttr(dataNode,"center")) != null ) geom.setCentre( t );

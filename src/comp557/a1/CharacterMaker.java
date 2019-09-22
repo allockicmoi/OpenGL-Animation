@@ -12,11 +12,19 @@ public class CharacterMaker {
 		// TODO: use for testing, and ultimately for creating a character​‌​​​‌‌​​​‌‌​​​‌​​‌‌‌​​‌
 		// Here we just return null, which will not be very interesting, so write
 		// some code to create a character and return the root node.
-		FreeJoint root = new FreeJoint("root");
-		RotaryJoint arm = new RotaryJoint("arm", 3, 1, 2, 0, 90, "y");
-		SphericalJoint hand = new SphericalJoint("hand",2, 0, 0, -30, 30, -30, 30, -30, 30);
-		root.add(arm);
-		arm.add(hand);
+		
+		
+//		FreeJoint root = new FreeJoint("root");
+//		RotaryJoint arm = new RotaryJoint("arm", 3, 1, 2, 0, 90, "y");
+//		SphericalJoint neck = new SphericalJoint("hand",2, 0, 0, -30, 30, -30, 30, -30, 30);	
+//		HeadBox head = new HeadBox("head", 1.2, 0.65, 1, 1, 1, 1, 2);
+//		root.add(arm);
+//		arm.add(neck);
+//		neck.add(head);
+		
+		GraphNode root =  CharacterFromXML.load("C:\\Users\\alloc\\Documents\\McGill\\McGill U6\\COMP 557\\A1\\comp557F19\\a1data\\character.xml");
+		
+		
 		return root;
 	}
 }
