@@ -1,3 +1,5 @@
+//Julien Courbebaisse - 260614548
+
 package comp557.a1;
 
 import com.jogamp.opengl.GL2;
