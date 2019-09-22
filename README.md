@@ -1,5 +1,6 @@
 # OpenGL-Animation
-COMP557-A1
+COMP557-A1<br/>
+Julien Courbebaisse - 260614548
 
 ## Character features
 -Body is composed of 3 spheres with middle sphere covering the root joint<br/>
