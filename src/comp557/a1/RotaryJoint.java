@@ -14,15 +14,15 @@ public class RotaryJoint extends GraphNode {
 	double x,y,z;
 	
 
-	public RotaryJoint(String name,double tx,double ty,double tz, double min, double max,String axis) {
+	public RotaryJoint(String name,double tx,double ty,double tz, double min, double max,String axis,double def) {
 		super(name);
 		this.axis=axis;
-		if(axis=="x")
-		dofs.add(rx = (new DoubleParameter(name+"rx", 0, min, max)));
-		if(axis=="y")
-		dofs.add(ry = (new DoubleParameter(name+"ry", 0, min, max)));
-		if(axis=="z")
-		dofs.add(rz = (new DoubleParameter(name+"ry", 0, min, max)));
+		if(axis.equals("x"))
+		dofs.add(this.rx = (new DoubleParameter(name+"rx", def, min, max)));
+		if(axis.equals("y"))
+		dofs.add(this.ry = (new DoubleParameter(name+"ry", def, min, max)));
+		if(axis.equals("z"))
+		dofs.add(this.rz = (new DoubleParameter(name+"rz", def, min, max)));
 		x=tx;y=ty;z=tz;
 		
 	}
@@ -31,12 +31,12 @@ public class RotaryJoint extends GraphNode {
 		GL2 gl = drawable.getGL().getGL2();
 		gl.glPushMatrix();
 		gl.glTranslated(x, y, z);
-		if(axis=="x")
+		if(axis.equals("x"))
 		gl.glRotated(rx.getValue(), 1, 0, 0);
-		if(axis=="y")
+		if(axis.equals("y"))
 		gl.glRotated(ry.getValue(), 0, 1, 0);
-		if(axis=="z")
-		gl.glRotated(ry.getValue(), 0, 0, 1);
+		if(axis.equals("z"))
+		gl.glRotated(rz.getValue(), 0, 0, 1);
 		
 		super.display(drawable);
 		gl.glPopMatrix();

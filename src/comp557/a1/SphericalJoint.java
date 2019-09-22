@@ -11,13 +11,13 @@ public class SphericalJoint extends GraphNode {
 	
 	DoubleParameter rx,ry,rz;
 	double x,y,z;
-
+	
 	public SphericalJoint(String name,double tx,double ty,double tz, double xmin, double xmax
-			, double ymin, double ymax, double zmin, double zmax) {
+			, double ymin, double ymax, double zmin, double zmax, double xdef,double ydef,double zdef) {
 		super(name);
-		dofs.add( rx = new DoubleParameter( name+" rx", 0, xmin, xmax ) );		
-		dofs.add( ry = new DoubleParameter( name+" ry", 0, ymin, ymax ) );
-		dofs.add( rz = new DoubleParameter( name+" rz", 0, zmin, zmax ) );
+		dofs.add( rx = new DoubleParameter( name+" rx", xdef, xmin, xmax ) );		
+		dofs.add( ry = new DoubleParameter( name+" ry", ydef, ymin, ymax ) );
+		dofs.add( rz = new DoubleParameter( name+" rz", zdef, zmin, zmax ) );
 		x=tx;y=ty;z=tz;
 	}
 	public void display(GLAutoDrawable drawable) {
