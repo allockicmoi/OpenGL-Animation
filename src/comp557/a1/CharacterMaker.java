@@ -2,7 +2,7 @@ package comp557.a1;
 
 public class CharacterMaker {
 
-	static public String name = "CHARACTER NAME - YOUR NAME AND STUDENT NUMBER";
+	static public String name = "TECHNOCRAWLER - Julien Courbebaisse 260614548";
 	
 	/** 
 	 * Creates a character.
@@ -22,7 +22,7 @@ public class CharacterMaker {
 //		arm.add(neck);
 //		neck.add(head);
 		
-		GraphNode root =  CharacterFromXML.load("C:\\Users\\alloc\\Documents\\McGill\\McGill U6\\COMP 557\\A1\\comp557F19\\a1data\\character.xml");
+		GraphNode root =  CharacterFromXML.load("a1data\\character.xml");
 		
 		
 		return root;

@@ -5,17 +5,17 @@
     	<geom type="sphere" name="midsection" center="0 0 0" color="0 0 1" scale="0.8 2 0.8" radius="1" slices="15" stacks="15">
     		
     	</geom>
-    	<node name="b1" type="spherical" position="0 2 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 0 "><node name="necktobody" type="spherical" position="1 2.5 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 0 ">
+    	<node name="b1" type="spherical" position="0 2 0" xboundaries="-70 70 0" yboundaries="-360 360 0" zboundaries="-36 36 0" defs="0 0 0 "><node name="necktobody" type="spherical" position="1 2.5 0" xboundaries="-360 360 0" yboundaries="-50 50 0" zboundaries="-10 36 0" defs="0 0 0 ">
     			
     			<geom center="-1 0 0 " name="neck" color="0 0.5 1" radius="0.5" scale="1 1 1"
     				slices="10" stacks="10" type="neckcylinder" height="2">
-    			<node name="necktohead" position="0 0 2" type="spherical" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 0 "><geom name="head" type="sphere" center="0 0 0" scale="0.8 0.8 0.6" color="0.4 0.2 0.2" radius="1.5" stacks="15" slices="15">
+    			<node name="necktohead" position="0 0 2" type="spherical" xboundaries="-90 36 0" yboundaries="-45 45 0" zboundaries="-360 360 0" defs="0 0 0 "><geom name="head" type="sphere" center="0 0 0" scale="0.8 0.8 0.6" color="0.4 0.2 0.2" radius="1.5" stacks="15" slices="15">
     			</geom>
-    				<node name="eye1" type="spherical" position="0.4 0 0.8" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 0 ">
+    				<node name="eye1" type="spherical" position="0.4 0 0.8" xboundaries="-10 10 0" yboundaries="-10 10 0" zboundaries="-360 360 0" defs="0 0 0 ">
     					<geom center="0 0 0" type="dodeca" color="1 1 1"
     						name="eye1" scale="0.2 0.2 0.1">
     					</geom></node>
-    				<node name="eye2" type="spherical" position="-0.4 0 0.8" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 0 ">
+    				<node name="eye2" type="spherical" position="-0.4 0 0.8" xboundaries="-10 10 0" yboundaries="-10 10 0" zboundaries="-360 360 0" defs="0 0 0 ">
     					<geom center="0 0 0" type="dodeca" color="1 1 1"
     						name="eye2" scale="0.2 0.2 0.1">
     					</geom></node></node></geom>
@@ -23,16 +23,16 @@
     		<geom center="0 1 0" color="0 0 1" name="torso" radius="1.1" scale="0.8 2.2 0.8"
     			slices="8" stacks="6" type="sphere">
     			
-    		</geom><node name="leg1joint1" position="0 1.9 0.5" type="rotary" axis="y" minmaxdef="-360 360 10">
+    		</geom><node name="leg1joint1" position="0 1.9 0.5" type="rotary" axis="y" minmaxdef="-150 42 10">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg1" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg1joint2" type="rotary" minmaxdef="-360 360 -45">
+    				<node axis="y" position="0 0 1.8" name="leg1joint2" type="rotary" minmaxdef="-150 23 -45">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg1joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg1" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg1joint3" type="rotary" minmaxdef="-360 360 -30">
+    					<node axis="y" position="0 0 2" name="leg1joint3" type="rotary" minmaxdef="-100 100 -30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg1joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
@@ -42,61 +42,61 @@
     		<node name="leg2joint1" position="0 0.4 0.5" type="rotary" axis="y" minmaxdef="-360 360 19">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg2" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg2joint2" type="rotary" minmaxdef="-360 360 -75">
+    				<node axis="y" position="0 0 1.8" name="leg2joint2" type="rotary" minmaxdef="-150 42 -75">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg1joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg2" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg2joint3" type="rotary" minmaxdef="-360 360 -30">
+    					<node axis="y" position="0 0 2" name="leg2joint3" type="rotary" minmaxdef="-100 100 -30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg2joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot2" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node>
-    		<node name="leg3joint1" position="0 0.4 -0.5" type="rotary" axis="y" minmaxdef="-360 360 -190">
+    		<node name="leg3joint1" position="0 0.4 -0.5" type="rotary" axis="y" minmaxdef="-210 -90 -190">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg3" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg3joint2" type="rotary" minmaxdef="-360 360 36">
+    				<node axis="y" position="0 0 1.8" name="leg3joint2" type="rotary" minmaxdef="-36 130 36">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg1joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg3" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg3joint3" type="rotary" minmaxdef="-360 360 30">
+    					<node axis="y" position="0 0 2" name="leg3joint3" type="rotary" minmaxdef="-100 100 30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg3joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot3" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node>
-    		<node name="leg4joint1" position="0 1.9 -0.5" type="rotary" axis="y" minmaxdef="-360 360 -180">
+    		<node name="leg4joint1" position="0 1.9 -0.5" type="rotary" axis="y" minmaxdef="-210 -90 -180">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg4" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg4joint2" type="rotary" minmaxdef="-360 360 37">
+    				<node axis="y" position="0 0 1.8" name="leg4joint2" type="rotary" minmaxdef="-36 130 37">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg4joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg4" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg4joint3" type="rotary" minmaxdef="-360 360 30">
+    					<node axis="y" position="0 0 2" name="leg4joint3" type="rotary" minmaxdef="-100 100 30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg4joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot4" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node></node>
-    	<node name="b2" type="spherical" position="0 -2 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="-180 0 0 "><node name="tail1" type="spherical" position="0 2 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 -20 ">
+    	<node name="b2" type="spherical" position="0 -2 0" xboundaries="-220 -135 0" yboundaries="-30 30 0" zboundaries="-50 50 0" defs="-180 0 0 "><node name="tail1" type="spherical" position="0 2 0" xboundaries="-45 45 0" yboundaries="-45 45 0" zboundaries="-45 45 0" defs="0 0 -20 ">
 	<geom center="0 1 0" color="0.5 0 1" name="bottom" radius="1.1" scale="0.8 0.8 0.8"
     			slices="8" stacks="6" type="sphere"></geom>
-	<node name="tail2" type="spherical" position="0 0.8 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 -15 ">
+	<node name="tail2" type="spherical" position="0 0.8 0" xboundaries="-45 45 0" yboundaries="-45 45 0" zboundaries="-45 45 0" defs="0 0 -15 ">
 	<geom center="0 1 0" color="0.5 0 1" name="bottom" radius="1" scale="0.8 0.8 0.8"
     			slices="8" stacks="6" type="sphere"></geom>
-	<node name="tail3" type="spherical" position="0 0.6 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 -10 ">
+	<node name="tail3" type="spherical" position="0 0.6 0" xboundaries="-45 45 0" yboundaries="-45 45 0" zboundaries="-45 45 0" defs="0 0 -10 ">
 	<geom center="0 1 0" color="0.5 0 1" name="bottom" radius="0.9" scale="0.8 0.8 0.8"
     			slices="8" stacks="6" type="sphere"></geom>
-	<node name="tail4" type="spherical" position="0 0.5 0" xboundaries="-360 360 0" yboundaries="-360 360 0" zboundaries="-360 360 0" defs="0 0 -5 ">
+	<node name="tail4" type="spherical" position="0 0.5 0" xboundaries="-45 45 0" yboundaries="-45 45 0" zboundaries="-45 45 0" defs="0 0 -5 ">
 	<geom center="0 1 0" color="0.5 0 1" name="bottom" radius="0.7" scale="0.8 0.8 0.8"
     			slices="8" stacks="6" type="sphere"></geom></node></node></node>
 
@@ -105,64 +105,64 @@
     		<geom center="0 1 0" color="0 0 1" name="bottom" radius="1.1" scale="0.8 2.2 0.8"
     			slices="8" stacks="6" type="sphere">
     			
-    		</geom><node name="leg5joint1" position="0 1.9 0.5" type="rotary" axis="y" minmaxdef="-360 360 10">
+    		</geom><node name="leg5joint1" position="0 1.9 0.5" type="rotary" axis="y" minmaxdef="-80 30 10">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg5" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg5joint2" type="rotary" minmaxdef="-360 360 -45">
+    				<node axis="y" position="0 0 1.8" name="leg5joint2" type="rotary" minmaxdef="-150 30 -45">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg5joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg5" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg5joint3" type="rotary" minmaxdef="-360 360 -30">
+    					<node axis="y" position="0 0 2" name="leg5joint3" type="rotary" minmaxdef="-100 100 -30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg5joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot5" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node>
-    		<node name="leg6joint1" position="0 0.4 0.5" type="rotary" axis="y" minmaxdef="-360 360 19">
+    		<node name="leg6joint1" position="0 0.4 0.5" type="rotary" axis="y" minmaxdef="-130 45 19">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg6" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg6joint2" type="rotary" minmaxdef="-360 360 -75">
+    				<node axis="y" position="0 0 1.8" name="leg6joint2" type="rotary" minmaxdef="-140 30 -75">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg6joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg6" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg6joint3" type="rotary" minmaxdef="-360 360 -30">
+    					<node axis="y" position="0 0 2" name="leg6joint3" type="rotary" minmaxdef="-100 100 -30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg6joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot6" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node>
-    		<node name="leg7joint1" position="0 0.4 -0.5" type="rotary" axis="y" minmaxdef="-360 360 -190">
+    		<node name="leg7joint1" position="0 0.4 -0.5" type="rotary" axis="y" minmaxdef="-220 -40 -190">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg7" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg7joint2" type="rotary" minmaxdef="-360 360 36">
+    				<node axis="y" position="0 0 1.8" name="leg7joint2" type="rotary" minmaxdef="-36 140 36">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg7joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg7" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg7joint3" type="rotary" minmaxdef="-360 360 30">
+    					<node axis="y" position="0 0 2" name="leg7joint3" type="rotary" minmaxdef="-100 100 30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg7joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     						<geom center="0 0 0.4" color="0.5 0.3 0.1" name="foot7" type="cube"
     							scale="0.25 0.26 0.25">
     						</geom></node></node></node>
-    		<node name="leg8joint1" position="0 1.9 -0.5" type="rotary" axis="y" minmaxdef="-360 360 -180">
+    		<node name="leg8joint1" position="0 1.9 -0.5" type="rotary" axis="y" minmaxdef="-220 -40 -180">
     				<geom center="0 0 0" color="0.5 0.2 0.2" height="2" name="upperleg8" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    				<node axis="y" position="0 0 1.8" name="leg8joint2" type="rotary" minmaxdef="-360 360 37">
+    				<node axis="y" position="0 0 1.8" name="leg8joint2" type="rotary" minmaxdef="-36 140 37">
     					<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg8joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
     					<geom center="0 0 0.2" color="0.5 0.2 0.2" height="2" name="lowerleg8" radius="0.3" scale="1 1 1 " slices="10" stacks="10" type="legcylinder">
     				</geom>
-    					<node axis="y" position="0 0 2" name="leg8joint3" type="rotary" minmaxdef="-360 360 30">
+    					<node axis="y" position="0 0 2" name="leg8joint3" type="rotary" minmaxdef="-100 100 30">
     						<geom center="0 0 0" color="0.1 0.1 0.3" height="" name="leg8joint2ball"
     						radius="0.4" scale="1 1 1" slices="10" stacks="10" type="sphere">
     					</geom>
